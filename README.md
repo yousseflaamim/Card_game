@@ -7,6 +7,8 @@ A guessing game where the user predicts whether the next card will be higher or 
 ## Features
 - Single card guessing game
 - Results screen showing final points
+## Link
+-https://www.figma.com/design/UPcy6O5So0VDq9MIBtUtbA/Untitled?node-id=0-1&t=tb3HJIbCqfaqtpSE-1
 
 ## Diagram
 <img width="594" alt="gam2" src="https://github.com/user-attachments/assets/cb977de0-93f7-43a3-b246-924b830b1091">
