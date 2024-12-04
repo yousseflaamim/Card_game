@@ -1,14 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("androidx.navigation.safeargs.kotlin")
+
+
+
 }
 
 android {
-    namespace = "com.example.myspeller"
-    compileSdk = 34
+    namespace = "com.example.my1"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myspeller"
+        applicationId = "com.example.my1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -16,6 +20,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
 
     buildTypes {
         release {
@@ -33,6 +39,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding =true
+    }
+
 }
 
 dependencies {
@@ -45,4 +55,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Views/Fragments integration
+    val nav_version = "2.8.4"
+    implementation("androidx.navigation:navigation-fragment:$nav_version")
+    implementation("androidx.navigation:navigation-ui:$nav_version")
+    // implementation("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
 }
