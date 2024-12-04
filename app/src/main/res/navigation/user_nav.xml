@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.my1.LoginFragment"
+        android:label="Fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_singlPlayFragment"
+            app:destination="@id/singlPlayFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_aiPlayerFragment"
+            app:destination="@id/aiPlayerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_multiPlayersFragment"
+            app:destination="@id/multiPlayersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiPlayersFragment"
+        android:name="com.example.my1.MultiPlayersFragment"
+        android:label="fragment_multi_players"
+        tools:layout="@layout/fragment_multi_players" >
+        <argument
+            android:name="player1Name"
+            app:argType="string" />
+        <argument
+            android:name="player2Name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aiPlayerFragment"
+        android:name="com.example.my1.AiPlayerFragment"
+        android:label="fragment_ai_player"
+        tools:layout="@layout/fragment_ai_player" >
+        <argument
+            android:name="player1Name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlPlayFragment"
+        android:name="com.example.my1.SinglPlayFragment"
+        android:label="fragment_singl_play"
+        tools:layout="@layout/fragment_singl_play" >
+        <argument
+            android:name="player1Name"
+            app:argType="string"/>
+    </fragment>
+
+</navigation>
