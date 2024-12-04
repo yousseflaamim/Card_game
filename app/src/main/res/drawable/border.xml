@@ -1,0 +1,6 @@
+<!-- res/drawable/border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- الخلفية (بيضاء) -->
+    <corners android:radius="8dp" /> <!-- حواف دائرية -->
+    <stroke android:color="#00FF00" android:width="3dp" /> <!-- اللون الأخضر -->
+</shape>
